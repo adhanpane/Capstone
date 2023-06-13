@@ -8,9 +8,9 @@ st.markdown('<h1 style="font-family: Arial, sans-serif; font-size: 36px; color: 
 
 import streamlit as st
 
-data_1 = pd.read_csv(r'kriminal_2021.csv')
-data_2 = pd.read_csv(r'kriminal_2020.csv')
-data_3 = pd.read_csv(r'kriminal_2019.csv')
+data_1 = pd.read_csv('kriminal_2021.csv')
+data_2 = pd.read_csv('kriminal_2020.csv')
+data_3 = pd.read_csv('kriminal_2019.csv')
 
 # Menu Sidebar
 st.sidebar.title('Menu')
@@ -82,8 +82,8 @@ if selected_menu == 'Summary':
     st.altair_chart(trend_chart, use_container_width=True)
   
     # Membaca data dari file CSV
-    data_6 = pd.read_csv(r"Kasus selesai 5 teratas.csv")
-    data_7 = pd.read_csv(r"Kasus selesai 5 terbawah.csv")
+    data_6 = pd.read_csv("Kasus selesai 5 teratas.csv")
+    data_7 = pd.read_csv("Kasus selesai 5 terbawah.csv")
 
     # Mengatur layout dengan Streamlit
     st.columns(2)
